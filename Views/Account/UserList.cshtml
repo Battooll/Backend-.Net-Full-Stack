@@ -1,0 +1,27 @@
+﻿@model IList<FirstProject.Models.LoginViewModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserList</title>
+</head>
+<body>
+    <h2>Users List</h2>
+    <p>Usernames and passwords:
+       <ul> @{
+            foreach (var user in Model)
+            {
+                <li>@user.Username : @user.Password</li>
+            
+            
+            }
+            }
+        </ul>
+            </p>
+</body>
+</html>
