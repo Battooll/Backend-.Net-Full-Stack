@@ -95,11 +95,13 @@ namespace FirstProject.Controllers
         //when I changed the name in the URL: http://localhost:5000/home/querytest?name=Ali%20Assad
         public IActionResult QueryTest()
         {
+            
             string name = "Batool Hammoud";
             if (!String.IsNullOrEmpty(HttpContext.Request.Query["name"]))
             {
                 name = HttpContext.Request.Query["name"];
             }
+
             ViewBag.Name = name;
             return View();
         }

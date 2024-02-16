@@ -5,6 +5,7 @@ namespace FirstProject.Models
 {
     public class Account
     {
+        public int AccountId { get; set; }
         [Required]
         [MinLength(5)]
         [MaxLength(15)]
